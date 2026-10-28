@@ -15,6 +15,7 @@ export const BRAND = {
   // Hero section background image — Golden Hour Fieldwork
   heroBgUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793188328/Delta_Harvester_at_Golden_Hour.png',
   localHeroBgUrl: '/assets/images/hero-machine.png',
+  sreshtaLogoUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793192889/72d616a4-6239-426b-bef6-0e5c346d62c3.png',
 };
 
 // ── Products ─────────────────────────────────────────────────

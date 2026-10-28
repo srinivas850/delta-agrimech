@@ -19,11 +19,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  height: 70px;
+  gap: 1.25rem;
+  height: 72px;
 }
 
-/* ── Logo — Cloudinary logo image with fallback ─────── */
+/* ── Left Side: Delta Agrimech Logo ─────────────────────── */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -32,9 +39,9 @@
 }
 
 .navbar__logo-img {
-  height: 48px;
+  height: 46px;
   width: auto;
-  max-width: 200px;
+  max-width: 190px;
   object-fit: contain;
   display: block;
 }
@@ -63,7 +70,49 @@
   margin-top: 1px;
 }
 
-/* ── Desktop nav links — black text, lime on hover/active ── */
+/* ── Sreshta Impex LLP Brand Block ───────────────────────── */
+.navbar__sreshta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.navbar__sreshta-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+.navbar__sreshta-text {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a4221;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Responsive visibility of Sreshta Impex LLP */
+.navbar__sreshta--mobile {
+  display: none;
+}
+
+.navbar__sreshta--desktop {
+  display: flex;
+}
+
+.navbar__brand-divider {
+  width: 1.5px;
+  height: 22px;
+  background: rgba(0, 0, 0, 0.15);
+  margin: 0 0.2rem;
+  display: inline-block;
+}
+
+/* ── Desktop nav links ───────────────────────────────────── */
 .navbar__links {
   display: flex;
   gap: 0;
@@ -74,10 +123,10 @@
 
 .navbar__link {
   font-family: var(--font-heading);
-  font-size: 1rem;           /* 16px — matches live site */
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #000000;            /* Black text — matches live site */
-  padding: 0.9375rem 0.9375rem;  /* 15px top/bottom, 15px sides — matches live */
+  color: #000000;
+  padding: 0.9rem 0.85rem;
   letter-spacing: 0;
   transition: color var(--transition);
   display: inline-block;
@@ -86,10 +135,18 @@
 
 .navbar__link:hover,
 .navbar__link--active {
-  color: var(--color-accent);  /* #99CA3C — exact live site hover color */
+  color: var(--color-accent);
 }
 
-/* ── CTA button — #99CA3C pill, matches live "Reach Us" button */
+/* ── Right Side Group ────────────────────────────────────── */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── CTA button ──────────────────────────────────────────── */
 .navbar__cta {
   padding: 0.5rem 1.25rem;
   font-size: 0.9rem;
@@ -100,6 +157,7 @@
   border: 2px solid var(--color-accent);
   border-radius: var(--border-radius-pill);
 }
+
 .navbar__cta:hover {
   background: transparent;
   color: #000000;
@@ -136,9 +194,9 @@
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* ── Mobile menu — dark bg matching live site dropdown ───── */
+/* ── Mobile menu ─────────────────────────────────────────── */
 .navbar__mobile {
-  background: var(--color-dark);  /* #040404 — matches live site */
+  background: var(--color-dark);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
@@ -160,7 +218,7 @@
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--color-white);     /* White text — matches live mobile */
+  color: var(--color-white);
   padding: 0.75rem 1rem;
   border-radius: var(--border-radius-sm);
   transition: color var(--transition), background var(--transition);
@@ -168,17 +226,74 @@
 
 .navbar__mobile-link:hover,
 .navbar__mobile-link--active {
-  color: var(--color-accent);    /* #99CA3C on hover */
+  color: var(--color-accent);
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
-@media (max-width: 1024px) {
-  .navbar__links,
+/* ── Responsive Behavior ─────────────────────────────────── */
+@media (max-width: 1120px) {
+  .navbar__links {
+    display: none;
+  }
   .navbar__cta {
     display: none;
   }
   .navbar__hamburger {
     display: flex;
+  }
+
+  /* Show Sreshta Impex LLP side-by-side with Delta Agrimech on Mobile / Tablet */
+  .navbar__sreshta--mobile {
+    display: flex;
+    align-items: center;
+  }
+  .navbar__sreshta--desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__inner {
+    height: 62px;
+    gap: 0.5rem;
+  }
+
+  /* Compact side-by-side logos on small mobile phones */
+  .navbar__logo-img {
+    height: 32px;
+    max-width: 120px;
+  }
+
+  .navbar__sreshta-img {
+    height: 24px;
+  }
+
+  .navbar__sreshta-text {
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .navbar__brand-divider {
+    height: 18px;
+    margin: 0 0.15rem;
+  }
+
+  .navbar__left {
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar__logo-img {
+    height: 28px;
+    max-width: 105px;
+  }
+
+  .navbar__sreshta-img {
+    height: 22px;
+  }
+
+  .navbar__sreshta-text {
+    font-size: 0.72rem;
   }
 }
