@@ -48,8 +48,8 @@ export default function Navbar() {
               }}
             />
             <div className="navbar__logo-fallback" style={{ display: 'none' }}>
-              <span className="navbar__logo-delta">DELTA</span>
-              <span className="navbar__logo-agrimech">AGRIMECH</span>
+              <span className="navbar__logo-delta">SRESHTA</span>
+              <span className="navbar__logo-agrimech">IMPEX LLP</span>
             </div>
           </a>
 

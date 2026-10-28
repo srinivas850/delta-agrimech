@@ -13,9 +13,7 @@ export default function Contact() {
           <span className="contact__badge">Find Us</span>
           <h2 className="section-title">Contact Us</h2>
           <div className="section-header-bar" />
-          <p className="section-subtitle">
-            Reach out to our offices or connect with our authorized distributor in Vijayawada.
-          </p>
+          <p className="section-subtitle">Reach Us</p>
         </div>
 
         {/* Contact cards */}
@@ -44,6 +42,7 @@ export default function Contact() {
             type="distributor"
             label={distributor.label}
             icon="🤝"
+            name={distributor.name}
             address={distributor.address}
             phone={distributor.phone}
             showCallBtn
@@ -66,13 +65,17 @@ export default function Contact() {
 }
 
 /* ── Reusable Contact Card ───────────────────────────────── */
-function ContactCard({ label, icon, address, phone, showCallBtn }) {
+function ContactCard({ label, icon, name, address, phone, showCallBtn }) {
   return (
     <div className="contact-card">
       <div className="contact-card__header">
         <span className="contact-card__icon">{icon}</span>
         <h3 className="contact-card__label">{label}</h3>
       </div>
+
+      {name && (
+        <p className="contact-card__name">{name}</p>
+      )}
 
       <p className="contact-card__address">
         <span className="contact-card__addr-icon">📌</span>

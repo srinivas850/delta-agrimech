@@ -13,7 +13,7 @@ export const BRAND = {
   logoUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/c_crop,h_600,w_1910,x_0,y_95/e_trim/v1793172908/Delta_Agrimech_Logo.png',
   localLogoUrl: '/assets/images/delta-agrimech-logo.png',
   // Hero section background image — Golden Hour Fieldwork
-  heroBgUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793188328/Delta_Harvester_at_Golden_Hour.png',
+  heroBgUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793201090/Golden_Harvest_at_Sunset.png',
   localHeroBgUrl: '/assets/images/hero-machine.png',
   sreshtaLogoUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793192889/72d616a4-6239-426b-bef6-0e5c346d62c3.png',
 };
@@ -105,6 +105,7 @@ export const CONTACT = {
   },
   distributor: {
     label: 'Authorized Distributor',
+    name: 'Green Fields Agro',
     address: 'Vijayawada',
     phone: '9848557862',
   },
