@@ -27,6 +27,22 @@ export default function NetworkMap() {
           </p>
         </div>
 
+        {/* Map Showcase Image */}
+        <div className="network-map-showcase">
+          <div className="network-map-image-card">
+            <img
+              src="https://res.cloudinary.com/dhge37es8/image/upload/v1793191187/India_Map_with_Glowing_Regional_Highlights.png"
+              alt="India Map with Glowing Regional Highlights — Andhra Pradesh, Telangana, Karnataka, Tamil Nadu"
+              className="network-map-img"
+              loading="lazy"
+            />
+            <div className="network-map-overlay-badge">
+              <span className="network-map-overlay-dot" />
+              <span>Active Regional Hubs: AP • TS • KA • TN</span>
+            </div>
+          </div>
+        </div>
+
         {/* State Filter Pills */}
         <div className="network-tabs">
           {NETWORK_STATES.map((st) => (
