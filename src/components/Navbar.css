@@ -88,10 +88,10 @@
 
 .navbar__sreshta-text {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 800;
-  color: var(--color-primary);
-  letter-spacing: 2px;
+  color: #2E3333;
+  letter-spacing: 1px;
   white-space: nowrap;
   line-height: 1;
 }
