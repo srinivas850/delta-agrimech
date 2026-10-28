@@ -321,7 +321,10 @@ app.post('/api/admin/change-password', requireAdminAuth, async (req, res) => {
 // ── Static Files & SPA Fallback (Production) ─────────────────
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
-  app.get('*', (req, res) => {
+  app.use((req, res, next) => {
+    if (req.method !== 'GET') {
+      return next();
+    }
     if (req.path.startsWith('/api')) {
       return res.status(404).json({ error: 'Endpoint not found.' });
     }
