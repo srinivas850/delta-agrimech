@@ -12,7 +12,7 @@ export const BRAND = {
   logoUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/c_crop,h_600,w_1910,x_0,y_95/e_trim/v1793172908/Delta_Agrimech_Logo.png',
   localLogoUrl: '/assets/images/delta-agrimech-logo.png',
   // Hero section background image — Golden Hour Fieldwork
-  heroBgUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793174571/Golden_Hour_Fieldwork.png',
+  heroBgUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793188328/Delta_Harvester_at_Golden_Hour.png',
   localHeroBgUrl: '/assets/images/hero-machine.png',
 };
 
