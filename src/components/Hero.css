@@ -164,6 +164,15 @@
   line-height: 1;
 }
 
+.hero__stat-text {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
 .hero__stat-label {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);

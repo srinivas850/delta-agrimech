@@ -57,8 +57,7 @@ export default function Hero() {
         {/* Stats bar */}
         <div className="hero__stats animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
           <div className="hero__stat">
-            <span className="hero__stat-num">100+</span>
-            <span className="hero__stat-label">Dealers Across India</span>
+            <span className="hero__stat-text">Dealers Across India</span>
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
