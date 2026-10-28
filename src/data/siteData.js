@@ -43,7 +43,7 @@ export const PRODUCTS = [
     name: 'Delta Baler',
     description:
       'The Delta Baler streamlines crop collection and baling operations with outstanding efficiency. Purpose-built to handle high volumes quickly, reducing labour costs and post-harvest losses.',
-    imagePath: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793181323/Orange_Shaktiman_Delta_Baler_Showcase.png',
+    imagePath: 'https://res.cloudinary.com/dhge37es8/image/upload/v1793186967/Delta_Baler_in_Golden_Fields.png',
     localImagePath: '/assets/images/product-delta-baler.png',
     imageAlt: 'Delta Baler agricultural machinery',
   },
