@@ -2,6 +2,8 @@
 // Delta Agrimech — Admin Authentication Utilities
 // ============================================================
 
+import { API_BASE } from './apiBase.js';
+
 const TOKEN_KEY = 'delta_agrimech_admin_token';
 const USER_KEY = 'delta_agrimech_admin_user';
 
@@ -49,7 +51,7 @@ export function isAdminAuthenticated() {
 }
 
 export async function adminLogin(username, password) {
-  const response = await fetch('/api/admin/login', {
+  const response = await fetch(`${API_BASE}/api/admin/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
@@ -77,7 +79,7 @@ export async function adminFetch(endpoint, options = {}) {
     ...(options.headers || {}),
   };
 
-  const response = await fetch(endpoint, {
+  const response = await fetch(`${API_BASE}${endpoint}`, {
     ...options,
     headers,
   });

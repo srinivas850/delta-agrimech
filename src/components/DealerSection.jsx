@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './DealerSection.css';
+import { API_BASE } from '../utils/apiBase.js';
 
 const INITIAL_FORM = {
   fullName: '',
@@ -48,7 +49,7 @@ export default function DealerSection() {
     setStatus(null);
 
     try {
-      const response = await fetch('/api/enquiries', {
+      const response = await fetch(`${API_BASE}/api/enquiries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

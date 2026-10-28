@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ProductEnquiryModal.css';
+import { API_BASE } from '../utils/apiBase.js';
 
 const INITIAL_FORM = {
   fullName: '',
@@ -50,7 +51,7 @@ export default function ProductEnquiryModal({ product, onClose }) {
     setErrorMsg('');
 
     try {
-      const response = await fetch('/api/enquiries', {
+      const response = await fetch(`${API_BASE}/api/enquiries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
