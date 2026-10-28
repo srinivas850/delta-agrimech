@@ -84,33 +84,32 @@
   align-items: center;
   gap: 0.55rem;
   padding: 0.45rem 1.1rem 0.45rem 0.85rem;
-  border: 1.5px solid rgba(32, 121, 44, 0.45);
+  border: 1.5px solid rgba(32, 121, 44, 0.5);
   border-radius: 50px;
-  background: rgba(32, 121, 44, 0.05);
+  background: rgba(32, 121, 44, 0.07);
   position: relative;
-  overflow: hidden;
-  /* Appear → hold → disappear → hold → repeat */
-  animation: brand-appear-disappear 7s ease-in-out infinite;
+  /* Brush stroke: paint in → hold → wipe out → pause → repeat */
+  animation: brush-stroke 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-@keyframes brand-appear-disappear {
-  /* Appear: fade in + slide up from below */
-  0%       { opacity: 0;   transform: translateY(8px)  scale(0.96); }
-  14%      { opacity: 1;   transform: translateY(0)     scale(1);    }
-  /* Hold visible */
-  60%      { opacity: 1;   transform: translateY(0)     scale(1);    }
-  /* Disappear: fade out + slide up */
-  74%      { opacity: 0;   transform: translateY(-8px)  scale(0.96); }
-  /* Brief pause invisible, position reset for next loop */
-  85%, 100%{ opacity: 0;   transform: translateY(8px)  scale(0.96); }
+@keyframes brush-stroke {
+  /* Start: fully hidden (clipped from right) */
+  0%, 4%  { clip-path: inset(0 100% 0 0 round 50px); }
+  /* Brush sweeps IN left → right */
+  28%     { clip-path: inset(0 0%   0 0 round 50px); }
+  /* Hold fully visible */
+  64%     { clip-path: inset(0 0%   0 0 round 50px); }
+  /* Brush wipes OUT left → right (erases from left side) */
+  88%     { clip-path: inset(0 0 0 100% round 50px); }
+  /* Snap back to hidden-right ready position */
+  89%, 100% { clip-path: inset(0 100% 0 0 round 50px); }
 }
 
 .navbar__brand-pill:hover {
   animation-play-state: paused;
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
+  clip-path: inset(0 0% 0 0 round 50px) !important;
   border-color: rgba(32, 121, 44, 0.75);
-  background: rgba(32, 121, 44, 0.09);
+  background: rgba(32, 121, 44, 0.11);
   box-shadow: 0 0 14px rgba(32, 121, 44, 0.2);
 }
 
