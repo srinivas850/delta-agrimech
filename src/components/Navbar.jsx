@@ -80,7 +80,6 @@ export default function Navbar() {
           {/* Sreshta Impex LLP shown on the right on Desktop */}
           <div className="navbar__sreshta navbar__sreshta--desktop">
             <div className="navbar__brand-pill">
-              <span className="navbar__brand-dot" />
               <span className="navbar__sreshta-text">Sreshta Impex LLP</span>
             </div>
           </div>

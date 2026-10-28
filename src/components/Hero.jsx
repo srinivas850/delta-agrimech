@@ -57,7 +57,8 @@ export default function Hero() {
         {/* Stats bar */}
         <div className="hero__stats animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
           <div className="hero__stat">
-            <span className="hero__stat-text">Dealers Across India</span>
+            <span className="hero__stat-num">✦</span>
+            <span className="hero__stat-label">Dealers Across India</span>
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
@@ -74,7 +75,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="hero__scroll-hint">
-        <span>Scroll Down</span>
+        <span className="hero__scroll-text">Scroll Down</span>
         <div className="hero__scroll-arrow" />
       </div>
     </section>

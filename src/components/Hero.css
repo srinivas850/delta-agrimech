@@ -164,6 +164,7 @@
   line-height: 1;
 }
 
+/* Remove old stat-text class (now using num+label structure) */
 .hero__stat-text {
   font-family: var(--font-heading);
   font-size: 1.15rem;
@@ -174,10 +175,12 @@
 }
 
 .hero__stat-label {
-  font-size: 0.8rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.5px;
-  margin-top: 4px;
+  margin-top: 5px;
+  text-transform: uppercase;
 }
 
 .hero__stat-divider {
@@ -198,9 +201,15 @@
   align-items: center;
   gap: 0.5rem;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
+}
+
+.hero__scroll-text {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .hero__scroll-arrow {
