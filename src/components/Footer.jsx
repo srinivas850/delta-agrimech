@@ -74,6 +74,7 @@ export default function Footer() {
         {/* Authorized Distributor: Vijayawada & 9848557862 */}
         <div className="footer__col">
           <h4 className="footer__col-title">Authorized Distributor</h4>
+          <p className="footer__distributor-name">{CONTACT.distributor.name}</p>
           <p className="footer__address">
             📍 <strong>{CONTACT.distributor.address}</strong>
           </p>

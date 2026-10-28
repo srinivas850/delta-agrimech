@@ -92,6 +92,14 @@
   display: inline-block;
 }
 
+.footer__distributor-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
 /* Quick links */
 .footer__links {
   display: flex;
