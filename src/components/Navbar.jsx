@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: 'Products',        href: '#products' },
   { label: 'Video Gallery',   href: '#gallery' },
   { label: 'Become a Dealer', href: '#dealer' },
+  { label: 'Network',         href: '#network' },
   { label: 'Contact Us',      href: '#contact' },
 ];
 
@@ -67,7 +68,7 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <a href="tel:9848557862" className="btn btn-accent navbar__cta" aria-label="Call Sreshta Impex LLP">
+        <a href="tel:9912000499" className="btn btn-accent navbar__cta" aria-label="Call Sreshta Impex LLP">
           📞 Call Now
         </a>
 
@@ -97,7 +98,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="tel:9848557862" className="btn btn-accent" style={{ display: 'block', textAlign: 'center', marginTop: '1rem' }}>
+            <a href="tel:9912000499" className="btn btn-accent" style={{ display: 'block', textAlign: 'center', marginTop: '1rem' }}>
               📞 Call Now
             </a>
           </li>

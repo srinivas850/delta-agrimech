@@ -6,7 +6,7 @@
 export const BRAND = {
   name: 'Sreshta Impex LLP',
   tagline: "Powering India's Fields",
-  phone: '9848557862',
+  phone: '9912000499',
   email: '',
   location: 'Vijayawada',
   // Cleanly cropped Cloudinary logo (top navy bar and bottom purple gradient removed)
@@ -89,10 +89,44 @@ export const VIDEOS = [
 ];
 
 // ── Contact Information ───────────────────────────────────────
-// Location: Vijayawada | Contact: 9848557862
+// Location: Vijayawada | Contact: 9912000499
 export const CONTACT = {
   city: 'Vijayawada',
   state: 'Andhra Pradesh',
-  phone: '9848557862',
-  displayPhone: '+91 9848557862',
+  phone: '9912000499',
+  displayPhone: '+91 9912000499',
 };
+
+// ── Dealer & Service Network Locations ─────────────────────────
+export const NETWORK_LOCATIONS = [
+  // Andhra Pradesh (AP)
+  { id: 'ap-srikakulam', name: 'Srikakulam', state: 'Andhra Pradesh', stateCode: 'AP', isHub: false, x: 73, y: 44 },
+  { id: 'ap-rajahmundry', name: 'Rajahmundry', state: 'Andhra Pradesh', stateCode: 'AP', isHub: false, x: 65, y: 50 },
+  { id: 'ap-tadepalligudem', name: 'Tadepalligudem', state: 'Andhra Pradesh', stateCode: 'AP', isHub: false, x: 62, y: 52 },
+  { id: 'ap-vijayawada', name: 'Vijayawada', state: 'Andhra Pradesh', stateCode: 'AP', isHub: true, x: 57, y: 55 },
+  { id: 'ap-guntur', name: 'Guntur', state: 'Andhra Pradesh', stateCode: 'AP', isHub: false, x: 55, y: 58 },
+
+  // Telangana
+  { id: 'ts-bodhan', name: 'Bodhan', state: 'Telangana', stateCode: 'TS', isHub: false, x: 44, y: 39 },
+  { id: 'ts-medak', name: 'Medak', state: 'Telangana', stateCode: 'TS', isHub: false, x: 47, y: 45 },
+  { id: 'ts-bhuvanagiri', name: 'Bhuvanagiri', state: 'Telangana', stateCode: 'TS', isHub: false, x: 50, y: 48 },
+  { id: 'ts-suryapet', name: 'Suryapet', state: 'Telangana', stateCode: 'TS', isHub: false, x: 53, y: 51 },
+  { id: 'ts-miryalaguda', name: 'Miryalaguda', state: 'Telangana', stateCode: 'TS', isHub: false, x: 51, y: 54 },
+  { id: 'ts-pebbair', name: 'Pebbair', state: 'Telangana', stateCode: 'TS', isHub: false, x: 46, y: 58 },
+
+  // Karnataka
+  { id: 'ka-sindhanur', name: 'Sindhanur', state: 'Karnataka', stateCode: 'KA', isHub: false, x: 39, y: 60 },
+
+  // Tamil Nadu
+  { id: 'tn-arani', name: 'Arani', state: 'Tamil Nadu', stateCode: 'TN', isHub: false, x: 50, y: 76 },
+  { id: 'tn-villupuram', name: 'Villupuram', state: 'Tamil Nadu', stateCode: 'TN', isHub: false, x: 52, y: 81 },
+  { id: 'tn-tiruvarur', name: 'Tiruvarur', state: 'Tamil Nadu', stateCode: 'TN', isHub: false, x: 53, y: 87 },
+];
+
+export const NETWORK_STATES = [
+  { code: 'ALL', name: 'All Network Hubs', count: 15 },
+  { code: 'AP', name: 'Andhra Pradesh', count: 5, cities: ['Vijayawada (Main Hub)', 'Tadepalligudem', 'Rajahmundry', 'Guntur', 'Srikakulam'] },
+  { code: 'TS', name: 'Telangana', count: 6, cities: ['Bodhan', 'Miryalaguda', 'Suryapet', 'Medak', 'Pebbair', 'Bhuvanagiri'] },
+  { code: 'TN', name: 'Tamil Nadu', count: 3, cities: ['Arani', 'Tiruvarur', 'Villupuram'] },
+  { code: 'KA', name: 'Karnataka', count: 1, cities: ['Sindhanur'] },
+];

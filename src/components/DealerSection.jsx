@@ -107,8 +107,8 @@ export default function DealerSection() {
 
           <div className="dealer-section__contact-cta">
             <p>Ready to talk? Call us directly:</p>
-            <a href="tel:9848557862" className="btn btn-accent dealer-section__call-btn">
-              📞 +91 9848557862
+            <a href="tel:9912000499" className="btn btn-accent dealer-section__call-btn">
+              📞 +91 9912000499
             </a>
           </div>
         </div>

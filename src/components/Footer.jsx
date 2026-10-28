@@ -7,6 +7,7 @@ const QUICK_LINKS = [
   { label: 'Products',        href: '#products' },
   { label: 'Video Gallery',   href: '#gallery' },
   { label: 'Become a Dealer', href: '#dealer' },
+  { label: 'Dealer Network',  href: '#network' },
   { label: 'Contact Us',      href: '#contact' },
 ];
 
