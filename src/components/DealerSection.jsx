@@ -86,10 +86,10 @@ export default function DealerSection() {
         {/* Left: Info Panel */}
         <div className="dealer-section__info">
           <span className="dealer-section__badge">Partnership</span>
-          <h2 className="dealer-section__title">Become an Authorized<br />Delta Agrimech Dealer</h2>
+          <h2 className="dealer-section__title">Become an Authorized<br />Sreshta Impex LLP Dealer</h2>
           <div className="dealer-section__bar" />
           <p className="dealer-section__desc">
-            Join our fast-growing authorized dealer network across India. Partner with Delta Agrimech
+            Join our fast-growing authorized dealer network across India. Partner with Sreshta Impex LLP
             and offer premium agricultural machinery to farming communities in your region.
           </p>
 
@@ -107,8 +107,8 @@ export default function DealerSection() {
 
           <div className="dealer-section__contact-cta">
             <p>Ready to talk? Call us directly:</p>
-            <a href="tel:9912000499" className="btn btn-accent dealer-section__call-btn">
-              📞 +91 9912000499
+            <a href="tel:9848557862" className="btn btn-accent dealer-section__call-btn">
+              📞 +91 9848557862
             </a>
           </div>
         </div>

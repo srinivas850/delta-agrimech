@@ -210,8 +210,8 @@ export default function ProductEnquiryModal({ product, onClose }) {
               >
                 {sending ? 'Submitting Enquiry…' : 'Submit Enquiry →'}
               </button>
-              <a href="tel:9912000499" className="btn btn-outline-dark product-modal__call">
-                📞 Call Directly: 9912000499
+              <a href="tel:9848557862" className="btn btn-outline-dark product-modal__call">
+                📞 Call Directly: 9848557862
               </a>
             </div>
           </form>

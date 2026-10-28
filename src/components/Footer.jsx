@@ -42,7 +42,7 @@ export default function Footer() {
             Powering India's agricultural future with premium machinery built for
             performance, reliability, and productivity.
           </p>
-          <a href="tel:9912000499" className="footer__phone">
+          <a href={`tel:${BRAND.phone}`} className="footer__phone">
             📞 +91 {BRAND.phone}
           </a>
         </div>
@@ -61,20 +61,15 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Head Office */}
+        {/* Contact info: Vijayawada only */}
         <div className="footer__col">
-          <h4 className="footer__col-title">Head Office</h4>
-          <p className="footer__address">{CONTACT.headOffice.address}</p>
-          <a href="tel:9912000499" className="footer__addr-phone">
-            📞 +91 {CONTACT.headOffice.phone}
+          <h4 className="footer__col-title">Reach Us</h4>
+          <p className="footer__address">
+            📍 <strong>{CONTACT.city}</strong>, {CONTACT.state}
+          </p>
+          <a href={`tel:${CONTACT.phone}`} className="footer__addr-phone">
+            📞 {CONTACT.displayPhone}
           </a>
-        </div>
-
-        {/* Distributor */}
-        <div className="footer__col">
-          <h4 className="footer__col-title">Authorized Distributor</h4>
-          <p className="footer__distributor-name">{CONTACT.distributor.name}</p>
-          <p className="footer__address">{CONTACT.distributor.address}</p>
         </div>
       </div>
 
@@ -82,7 +77,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p className="footer__copyright">
-            © {year} Delta Agrimech. All rights reserved.
+            © {year} Sreshta Impex LLP. All rights reserved.
           </p>
           <div className="footer__bottom-links">
             <span className="footer__built">

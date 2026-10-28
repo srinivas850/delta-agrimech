@@ -489,7 +489,7 @@ export default function AdminDashboard() {
                   📞 Call Customer ({selectedEnquiry.phone})
                 </a>
                 <a
-                  href={`mailto:${selectedEnquiry.email}?subject=Delta Agrimech Enquiry`}
+                  href={`mailto:${selectedEnquiry.email}?subject=Sreshta Impex LLP Enquiry`}
                   className="btn btn-outline-dark drawer-action-btn"
                 >
                   ✉️ Send Email

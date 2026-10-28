@@ -1,13 +1,14 @@
 // ============================================================
-// Delta Agrimech — Central Site Data
-// Edit this file to update products, videos, and contact info
+// Sreshta Impex LLP — Central Site Data
+// Products & Logo retain Delta Agrimech brand identity
 // ============================================================
 
 export const BRAND = {
-  name: 'Delta Agrimech',
-  tagline: 'Powering India\'s Fields',
-  phone: '9912000499',
+  name: 'Sreshta Impex LLP',
+  tagline: "Powering India's Fields",
+  phone: '9848557862',
   email: '',
+  location: 'Vijayawada',
   // Cleanly cropped Cloudinary logo (top navy bar and bottom purple gradient removed)
   logoUrl: 'https://res.cloudinary.com/dhge37es8/image/upload/c_crop,h_600,w_1910,x_0,y_95/e_trim/v1793172908/Delta_Agrimech_Logo.png',
   localLogoUrl: '/assets/images/delta-agrimech-logo.png',
@@ -17,8 +18,7 @@ export const BRAND = {
 };
 
 // ── Products ─────────────────────────────────────────────────
-// Replace imagePath values with actual filenames once you have them.
-// Place images in: public/assets/images/
+// Product names and machine images remain Delta Agrimech
 export const PRODUCTS = [
   {
     id: 'delta-9-pro-100hp',
@@ -50,63 +50,59 @@ export const PRODUCTS = [
 ];
 
 // ── Videos ───────────────────────────────────────────────────
-// Add up to 8 videos. Each entry can be:
-//   - A local file: set src to '/assets/videos/your-video.mp4'
-//   - A YouTube embed: set youtubeId to the video ID (e.g. 'dQw4w9WgXcQ')
-// Set thumbnail to '/assets/images/thumb-video-N.jpg' for custom thumbnails.
 export const VIDEOS = [
   {
     id: 'video-1',
-    title: 'Delta Agrimech — Machine Demo 1',
+    title: 'Sreshta Impex LLP — Machine Demo 1',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-2',
-    title: 'Delta Agrimech — Field Operation 2',
+    title: 'Sreshta Impex LLP — Field Operation 2',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-3',
-    title: 'Delta Agrimech — Machine Demo 3',
+    title: 'Sreshta Impex LLP — Machine Demo 3',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-4',
-    title: 'Delta Agrimech — Field Operation 4',
+    title: 'Sreshta Impex LLP — Field Operation 4',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-5',
-    title: 'Delta Agrimech — Machine Demo 5',
+    title: 'Sreshta Impex LLP — Machine Demo 5',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-6',
-    title: 'Delta Agrimech — Company Footage 6',
+    title: 'Sreshta Impex LLP — Company Footage 6',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-7',
-    title: 'Delta Agrimech — Agricultural Demo 7',
+    title: 'Sreshta Impex LLP — Agricultural Demo 7',
     src: '',
     youtubeId: '',
     thumbnail: '',
   },
   {
     id: 'video-8',
-    title: 'Delta Agrimech — Company Showcase 8',
+    title: 'Sreshta Impex LLP — Company Showcase 8',
     src: '',
     youtubeId: '',
     thumbnail: '',
@@ -114,24 +110,10 @@ export const VIDEOS = [
 ];
 
 // ── Contact Information ───────────────────────────────────────
+// Location: Vijayawada | Contact: 9848557862
 export const CONTACT = {
-  headOffice: {
-    label: 'Head Office',
-    address:
-      'Shop No.2, Block No.C7, Plot No.215, 2nd Cross Road, New Autonagar, Vijayawada-520007',
-    phone: '9912000499',
-  },
-  branchOffice: {
-    label: 'Branch Office',
-    address:
-      '3-414, Beside GIET College, Velugubanda, Rajanagaram Mandal, Rajahmundry Rural, East Godavari District-533294',
-    phone: '',
-  },
-  distributor: {
-    label: 'Distributor',
-    name: 'Green Fields Agro',
-    address:
-      'Shop No.1, Block No.C7, Plot No.215, 2nd Cross Road, New Autonagar, Vijayawada-520007',
-    phone: '',
-  },
+  city: 'Vijayawada',
+  state: 'Andhra Pradesh',
+  phone: '9848557862',
+  displayPhone: '+91 9848557862',
 };

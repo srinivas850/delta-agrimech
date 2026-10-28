@@ -128,7 +128,7 @@ export default function AdminLogin() {
         {/* Back to site link */}
         <div className="admin-login-footer">
           <a href="/" className="back-to-site-link">
-            ← Return to Delta Agrimech Website
+            ← Return to Sreshta Impex LLP Website
           </a>
         </div>
       </div>
