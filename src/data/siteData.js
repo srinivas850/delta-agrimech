@@ -87,6 +87,13 @@ export const VIDEOS = [
     youtubeId: '',
     thumbnail: 'https://res.cloudinary.com/dhge37es8/video/upload/so_1/v1793189674/WhatsApp_Video_2026-10-28_at_5.36.43_PM.jpg',
   },
+  {
+    id: 'video-6',
+    title: 'Delta Harvesting Demo 6',
+    src: 'https://res.cloudinary.com/dhge37es8/video/upload/v1793208466/WhatsApp_Video_2026-10-28_at_10.07.06_PM.mp4',
+    youtubeId: '',
+    thumbnail: 'https://res.cloudinary.com/dhge37es8/video/upload/so_1/v1793208466/WhatsApp_Video_2026-10-28_at_10.07.06_PM.jpg',
+  },
 ];
 
 // ── Contact Information ───────────────────────────────────────

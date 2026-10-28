@@ -8,8 +8,8 @@ export default function WelcomeBanner() {
         <h2 className="welcome-banner__title">Welcome to Sreshta Impex LLP</h2>
         <div className="welcome-banner__divider" />
         <p className="welcome-banner__text">
-          Sreshta Impex LLP offers a wide range of harvesting machines, including combine harvesters,
-          forage harvesters, and balers. Our machines are engineered to meet the diverse needs of modern
+          Sreshta Impex LLP offers a wide range of harvesting machines, including combine harvesters
+          and balers. Our machines are engineered to meet the diverse needs of modern
           Indian agriculture — from small-scale family holdings to large commercial farming operations.
         </p>
       </div>
