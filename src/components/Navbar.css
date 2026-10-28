@@ -1,0 +1,184 @@
+/* ── Navbar — White background matching deltaagrimech.com ─── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-white);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 0;
+  transition: box-shadow var(--transition);
+}
+
+.navbar--scrolled {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 70px;
+}
+
+/* ── Logo — Cloudinary logo image with fallback ─────── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  text-decoration: none;
+}
+
+.navbar__logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar__logo-fallback {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.navbar__logo-delta {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+}
+
+.navbar__logo-agrimech {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+/* ── Desktop nav links — black text, lime on hover/active ── */
+.navbar__links {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__link {
+  font-family: var(--font-heading);
+  font-size: 1rem;           /* 16px — matches live site */
+  font-weight: 500;
+  color: #000000;            /* Black text — matches live site */
+  padding: 0.9375rem 0.9375rem;  /* 15px top/bottom, 15px sides — matches live */
+  letter-spacing: 0;
+  transition: color var(--transition);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--color-accent);  /* #99CA3C — exact live site hover color */
+}
+
+/* ── CTA button — #99CA3C pill, matches live "Reach Us" button */
+.navbar__cta {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius-pill);
+}
+.navbar__cta:hover {
+  background: transparent;
+  color: #000000;
+  border-color: var(--color-accent);
+}
+
+/* ── Hamburger ───────────────────────────────────────────── */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: #000000;
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+.navbar__hamburger--open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.navbar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger--open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ── Mobile menu — dark bg matching live site dropdown ───── */
+.navbar__mobile {
+  background: var(--color-dark);  /* #040404 — matches live site */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.navbar__mobile--open {
+  max-height: 500px;
+}
+
+.navbar__mobile ul {
+  padding: 1rem var(--space-md) 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.navbar__mobile-link {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-white);     /* White text — matches live mobile */
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  transition: color var(--transition), background var(--transition);
+}
+
+.navbar__mobile-link:hover,
+.navbar__mobile-link--active {
+  color: var(--color-accent);    /* #99CA3C on hover */
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+  .navbar__hamburger {
+    display: flex;
+  }
+}
