@@ -88,11 +88,12 @@
 
 .navbar__sreshta-text {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #1a4221;
-  letter-spacing: 0.3px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 2px;
   white-space: nowrap;
+  line-height: 1;
 }
 
 /* Responsive visibility of Sreshta Impex LLP */
@@ -269,8 +270,9 @@
   }
 
   .navbar__sreshta-text {
-    font-size: 0.78rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
   }
 
   .navbar__brand-divider {
@@ -294,6 +296,7 @@
   }
 
   .navbar__sreshta-text {
-    font-size: 0.72rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
   }
 }
