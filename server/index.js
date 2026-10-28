@@ -3,7 +3,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { pool, initDb } from './db.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, '../dist');
 
 dotenv.config();
 
@@ -310,6 +317,17 @@ app.post('/api/admin/change-password', requireAdminAuth, async (req, res) => {
     return res.status(500).json({ error: 'Server error while updating password.' });
   }
 });
+
+// ── Static Files & SPA Fallback (Production) ─────────────────
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (req, res) => {
+    if (req.path.startsWith('/api')) {
+      return res.status(404).json({ error: 'Endpoint not found.' });
+    }
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 // ── Start Server ──────────────────────────────────────────────
 async function startServer() {
