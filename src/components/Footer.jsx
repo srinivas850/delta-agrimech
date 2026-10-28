@@ -62,14 +62,23 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact info: Vijayawada only */}
+        {/* Head Office */}
         <div className="footer__col">
-          <h4 className="footer__col-title">Reach Us</h4>
+          <h4 className="footer__col-title">Head Office</h4>
+          <p className="footer__address">{CONTACT.headOffice.address}</p>
+          <a href={`tel:${CONTACT.headOffice.phone}`} className="footer__addr-phone">
+            📞 +91 {CONTACT.headOffice.phone}
+          </a>
+        </div>
+
+        {/* Authorized Distributor: Vijayawada & 9848557862 */}
+        <div className="footer__col">
+          <h4 className="footer__col-title">Authorized Distributor</h4>
           <p className="footer__address">
-            📍 <strong>{CONTACT.city}</strong>, {CONTACT.state}
+            📍 <strong>{CONTACT.distributor.address}</strong>
           </p>
-          <a href={`tel:${CONTACT.phone}`} className="footer__addr-phone">
-            📞 {CONTACT.displayPhone}
+          <a href={`tel:${CONTACT.distributor.phone}`} className="footer__addr-phone">
+            📞 +91 {CONTACT.distributor.phone}
           </a>
         </div>
       </div>

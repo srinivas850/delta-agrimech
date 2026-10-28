@@ -89,12 +89,24 @@ export const VIDEOS = [
 ];
 
 // ── Contact Information ───────────────────────────────────────
-// Location: Vijayawada | Contact: 9912000499
 export const CONTACT = {
-  city: 'Vijayawada',
-  state: 'Andhra Pradesh',
-  phone: '9912000499',
-  displayPhone: '+91 9912000499',
+  headOffice: {
+    label: 'Head Office',
+    address:
+      'Shop No.2, Block No.C7, Plot No.215, 2nd Cross Road, New Autonagar, Vijayawada-520007',
+    phone: '9912000499',
+  },
+  branchOffice: {
+    label: 'Branch Office',
+    address:
+      '3-414, Beside GIET College, Velugubanda, Rajanagaram Mandal, Rajahmundry Rural, East Godavari District-533294',
+    phone: '',
+  },
+  distributor: {
+    label: 'Authorized Distributor',
+    address: 'Vijayawada',
+    phone: '9848557862',
+  },
 };
 
 // ── Dealer & Service Network Locations ─────────────────────────

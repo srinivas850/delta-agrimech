@@ -1,8 +1,9 @@
-/* ── Dealer & Service Network Section ─────────────────── */
+/* ── Dealer & Service Network Map Section ─────────────────── */
 .network-section {
   background: var(--color-charcoal);
   position: relative;
   overflow: hidden;
+  padding: 5rem 0;
 }
 
 .network-badge {
@@ -19,12 +20,12 @@
   margin-bottom: 0.8rem;
 }
 
-/* ── Map Showcase Image (Exact Fit & Highlighted) ───────── */
+/* ── Map Showcase Image (Exact Fit & Boldly Highlighted) ─── */
 .network-map-showcase {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.5rem;
   padding: 0 1rem;
 }
 
@@ -40,9 +41,9 @@
   border: 2.5px solid var(--color-accent);
   box-shadow: 
     0 0 0 1px rgba(153, 202, 60, 0.5),
-    0 0 30px rgba(153, 202, 60, 0.4),
-    0 0 60px rgba(32, 121, 44, 0.35),
-    0 20px 50px rgba(0, 0, 0, 0.65);
+    0 0 32px rgba(153, 202, 60, 0.45),
+    0 0 65px rgba(32, 121, 44, 0.4),
+    0 22px 55px rgba(0, 0, 0, 0.7);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
@@ -51,15 +52,15 @@
   border-color: #bbf455;
   box-shadow: 
     0 0 0 2px rgba(187, 244, 85, 0.7),
-    0 0 45px rgba(153, 202, 60, 0.6),
-    0 0 85px rgba(32, 121, 44, 0.5),
-    0 28px 65px rgba(0, 0, 0, 0.75);
+    0 0 48px rgba(153, 202, 60, 0.65),
+    0 0 90px rgba(32, 121, 44, 0.55),
+    0 28px 70px rgba(0, 0, 0, 0.8);
 }
 
 .network-map-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Perfectly fills the exact-sized card */
+  object-fit: cover;
   display: block;
 }
 
@@ -68,7 +69,7 @@
   bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(5, 17, 8, 0.9);
+  background: rgba(5, 17, 8, 0.92);
   backdrop-filter: blur(12px);
   border: 1.5px solid rgba(153, 202, 60, 0.6);
   color: #ffffff;
@@ -105,6 +106,53 @@
   }
 }
 
+/* ── Connect Strip ───────────────────────────────────────── */
+.network-connect-strip {
+  max-width: 720px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(14, 39, 20, 0.85) 0%, rgba(21, 60, 30, 0.85) 100%);
+  border: 1px solid rgba(153, 202, 60, 0.25);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.network-connect-strip__text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.network-connect-strip__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .network-connect-strip {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+  }
+  .network-connect-strip__actions {
+    justify-content: center;
+    width: 100%;
+  }
+  .network-connect-strip__actions .btn {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .network-map-image-card {
     max-width: 100%;
@@ -117,258 +165,5 @@
     bottom: 0.85rem;
     max-width: 92%;
     justify-content: center;
-  }
-}
-
-/* ── Filter Tabs ─────────────────────────────────────────── */
-.network-tabs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-}
-
-.network-tab {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--color-white);
-  padding: 0.6rem 1.3rem;
-  border-radius: var(--border-radius-pill);
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all var(--transition);
-}
-
-.network-tab:hover {
-  background: rgba(153, 202, 60, 0.15);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.network-tab--active {
-  background: var(--color-primary);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-  box-shadow: 0 4px 16px rgba(32, 121, 44, 0.35);
-}
-
-.network-tab__count {
-  background: rgba(255, 255, 255, 0.2);
-  font-size: 0.75rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-.network-tab--active .network-tab__count {
-  background: var(--color-accent);
-  color: var(--color-dark);
-}
-
-/* ── State Cards Grid ────────────────────────────────────── */
-.network-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.network-state-card {
-  background: linear-gradient(135deg, #0e2714 0%, #153c1e 100%);
-  border: 1px solid rgba(153, 202, 60, 0.25);
-  border-radius: var(--border-radius-lg);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-}
-
-.network-state-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-accent);
-  box-shadow: 0 16px 40px rgba(32, 121, 44, 0.25);
-}
-
-.network-state-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.network-state-card__tag {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--border-radius-pill);
-  margin-bottom: 0.4rem;
-  letter-spacing: 1px;
-}
-
-.network-state-card__title {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-white);
-  margin: 0;
-}
-
-.network-state-card__count-badge {
-  background: rgba(153, 202, 60, 0.15);
-  border: 1px solid rgba(153, 202, 60, 0.4);
-  color: var(--color-accent);
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--border-radius-pill);
-  white-space: nowrap;
-}
-
-/* ── City Chips ──────────────────────────────────────────── */
-.network-city-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.network-chip {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--border-radius-pill);
-  padding: 0.45rem 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--color-white);
-  font-size: 0.88rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.network-chip:hover {
-  background: rgba(153, 202, 60, 0.2);
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.network-chip--hq {
-  background: rgba(255, 204, 0, 0.15);
-  border-color: rgba(255, 204, 0, 0.6);
-  color: #ffea79;
-  font-weight: 700;
-}
-
-.network-chip__icon {
-  font-size: 0.85rem;
-}
-
-/* ── Service Capabilities ────────────────────────────────── */
-.network-state-card__services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.service-pill {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(153, 202, 60, 0.2);
-  color: var(--color-accent);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.25rem 0.7rem;
-  border-radius: var(--border-radius-pill);
-}
-
-/* ── Action Footer ───────────────────────────────────────── */
-.network-state-card__footer {
-  margin-top: auto;
-}
-
-.network-state-card__btn {
-  width: 100%;
-  justify-content: center;
-  font-size: 0.92rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius-pill);
-}
-
-/* ── Bottom Metrics Strip ────────────────────────────────── */
-.network-stats-strip {
-  background: linear-gradient(135deg, rgba(14, 39, 20, 0.9) 0%, rgba(21, 60, 30, 0.9) 100%);
-  border: 1px solid rgba(153, 202, 60, 0.2);
-  border-radius: var(--border-radius-md);
-  padding: 1.75rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.network-stat-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.network-stat-box__num {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  line-height: 1.1;
-}
-
-.network-stat-box__label {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 0.25rem;
-}
-
-.network-stat-divider {
-  width: 1px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-/* ── Responsive ─────────────────────────────────────────── */
-@media (max-width: 900px) {
-  .network-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .network-tabs {
-    gap: 0.4rem;
-  }
-  .network-tab {
-    padding: 0.45rem 0.85rem;
-    font-size: 0.8rem;
-  }
-  .network-stat-divider {
-    display: none;
-  }
-  .network-stats-strip {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-    text-align: center;
   }
 }
