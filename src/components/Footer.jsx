@@ -65,6 +65,7 @@ export default function Footer() {
         {/* Head Office */}
         <div className="footer__col">
           <h4 className="footer__col-title">Head Office</h4>
+          <p className="footer__sreshta-highlight">Sreshta Impex LLP</p>
           <p className="footer__address">{CONTACT.headOffice.address}</p>
           <a href={`tel:${CONTACT.headOffice.phone}`} className="footer__addr-phone">
             📞 +91 {CONTACT.headOffice.phone}

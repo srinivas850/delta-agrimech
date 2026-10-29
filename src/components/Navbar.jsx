@@ -56,7 +56,10 @@ export default function Navbar() {
           {/* Sreshta Impex LLP shown side-by-side with Delta Agrimech on Mobile */}
           <div className="navbar__sreshta navbar__sreshta--mobile">
             <span className="navbar__brand-divider" />
-            <span className="navbar__sreshta-text">Sreshta Impex LLP</span>
+            <div className="navbar__brand-pill">
+              <span className="navbar__sreshta-line1">SRESHTA</span>
+              <span className="navbar__sreshta-line2">IMPEX LLP</span>
+            </div>
           </div>
         </div>
 
@@ -80,7 +83,8 @@ export default function Navbar() {
           {/* Sreshta Impex LLP shown on the right on Desktop */}
           <div className="navbar__sreshta navbar__sreshta--desktop">
             <div className="navbar__brand-pill">
-              <span className="navbar__sreshta-text">Sreshta Impex LLP</span>
+              <span className="navbar__sreshta-line1">SRESHTA</span>
+              <span className="navbar__sreshta-line2">IMPEX LLP</span>
             </div>
           </div>
 

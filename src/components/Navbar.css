@@ -78,66 +78,51 @@
   user-select: none;
 }
 
-/* Elegant brand pill — desktop only */
+/* Black background pill — no animation, no outline */
 .navbar__brand-pill {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.45rem 1.1rem 0.45rem 0.85rem;
-  border: 1.5px solid rgba(32, 121, 44, 0.5);
-  border-radius: 50px;
-  background: rgba(32, 121, 44, 0.07);
-  position: relative;
-  /* Brush stroke: paint in → hold → wipe out → pause → repeat */
-  animation: brush-stroke 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes brush-stroke {
-  /* Start: fully hidden (clipped from right) */
-  0%, 4%  { clip-path: inset(0 100% 0 0 round 50px); }
-  /* Brush sweeps IN left → right */
-  28%     { clip-path: inset(0 0%   0 0 round 50px); }
-  /* Hold fully visible */
-  64%     { clip-path: inset(0 0%   0 0 round 50px); }
-  /* Brush wipes OUT left → right (erases from left side) */
-  88%     { clip-path: inset(0 0 0 100% round 50px); }
-  /* Snap back to hidden-right ready position */
-  89%, 100% { clip-path: inset(0 100% 0 0 round 50px); }
-}
-
-.navbar__brand-pill:hover {
-  animation-play-state: paused;
-  clip-path: inset(0 0% 0 0 round 50px) !important;
-  border-color: rgba(32, 121, 44, 0.75);
-  background: rgba(32, 121, 44, 0.11);
-  box-shadow: 0 0 14px rgba(32, 121, 44, 0.2);
-}
-
-/* Small glowing green accent dot */
-.navbar__brand-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #20792C;
-  flex-shrink: 0;
-  box-shadow: 0 0 6px 2px rgba(32, 121, 44, 0.45);
-  animation: dot-pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes dot-pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 6px 2px rgba(32, 121, 44, 0.45); }
-  50%       { opacity: 0.7; box-shadow: 0 0 10px 4px rgba(32, 121, 44, 0.25); }
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  background: #000000;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  line-height: 1.1;
 }
 
 .navbar__sreshta-img {
   display: none; /* logo image hidden; text-only brand */
 }
 
+.navbar__sreshta-line1 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #00cc44;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.navbar__sreshta-line2 {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #00cc44;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Keep legacy .navbar__sreshta-text for any other usage */
 .navbar__sreshta-text {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
-  color: #2E3333;
+  color: #00cc44;
   letter-spacing: 0.5px;
   white-space: nowrap;
   line-height: 1;

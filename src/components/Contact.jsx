@@ -23,6 +23,7 @@ export default function Contact() {
             type="head"
             label={headOffice.label}
             icon="🏢"
+            showSreshta
             address={headOffice.address}
             phone={headOffice.phone}
             showCallBtn
@@ -33,6 +34,7 @@ export default function Contact() {
             type="branch"
             label={branchOffice.label}
             icon="📍"
+            showSreshta
             address={branchOffice.address}
             phone={branchOffice.phone}
           />
@@ -65,13 +67,17 @@ export default function Contact() {
 }
 
 /* ── Reusable Contact Card ───────────────────────────────── */
-function ContactCard({ label, icon, name, address, phone, showCallBtn }) {
+function ContactCard({ label, icon, name, address, phone, showCallBtn, showSreshta }) {
   return (
     <div className="contact-card">
       <div className="contact-card__header">
         <span className="contact-card__icon">{icon}</span>
         <h3 className="contact-card__label">{label}</h3>
       </div>
+
+      {showSreshta && (
+        <p className="contact-card__sreshta-highlight">Sreshta Impex LLP</p>
+      )}
 
       {name && (
         <p className="contact-card__name">{name}</p>
