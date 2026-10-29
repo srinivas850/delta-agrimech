@@ -78,18 +78,19 @@
   user-select: none;
 }
 
-/* Black background pill — no animation, no outline */
+/* Green background pill matching Delta Agrimech height & weight — black font */
 .navbar__brand-pill {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 0.9rem;
-  background: #000000;
+  height: 46px;
+  padding: 0 1rem;
+  background: var(--color-primary);
   border-radius: 6px;
   border: none;
   outline: none;
-  line-height: 1.1;
+  box-sizing: border-box;
 }
 
 .navbar__sreshta-img {
@@ -98,23 +99,24 @@
 
 .navbar__sreshta-line1 {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #00cc44;
-  letter-spacing: 2px;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 2.5px;
   white-space: nowrap;
-  line-height: 1.15;
+  line-height: 1;
 }
 
 .navbar__sreshta-line2 {
   font-family: var(--font-heading);
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: #00cc44;
-  letter-spacing: 2px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 3.5px;
   white-space: nowrap;
-  line-height: 1.2;
+  line-height: 1;
   text-transform: uppercase;
+  margin-top: 2px;
 }
 
 /* Keep legacy .navbar__sreshta-text for any other usage */
@@ -122,7 +124,7 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
-  color: #00cc44;
+  color: #000000;
   letter-spacing: 0.5px;
   white-space: nowrap;
   line-height: 1;
@@ -297,6 +299,21 @@
     max-width: 120px;
   }
 
+  .navbar__brand-pill {
+    height: 32px;
+    padding: 0 0.6rem;
+  }
+
+  .navbar__sreshta-line1 {
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+  }
+
+  .navbar__sreshta-line2 {
+    font-size: 0.45rem;
+    letter-spacing: 2px;
+  }
+
   .navbar__sreshta-img {
     height: 24px;
   }
@@ -321,6 +338,21 @@
   .navbar__logo-img {
     height: 28px;
     max-width: 105px;
+  }
+
+  .navbar__brand-pill {
+    height: 28px;
+    padding: 0 0.45rem;
+  }
+
+  .navbar__sreshta-line1 {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .navbar__sreshta-line2 {
+    font-size: 0.4rem;
+    letter-spacing: 1.5px;
   }
 
   .navbar__sreshta-img {
