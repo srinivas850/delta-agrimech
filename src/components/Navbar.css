@@ -78,7 +78,7 @@
   user-select: none;
 }
 
-/* Green background pill matching Delta Agrimech height & weight — black font */
+/* Lighter green background pill matching Delta Agrimech height & weight — black font */
 .navbar__brand-pill {
   display: flex;
   flex-direction: column;
@@ -86,37 +86,28 @@
   justify-content: center;
   height: 46px;
   padding: 0 1rem;
-  background: var(--color-primary);
+  background: #48bb5a;
   border-radius: 6px;
   border: none;
   outline: none;
   box-sizing: border-box;
+  gap: 2px;
 }
 
 .navbar__sreshta-img {
   display: none; /* logo image hidden; text-only brand */
 }
 
-.navbar__sreshta-line1 {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: #000000;
-  letter-spacing: 2.5px;
-  white-space: nowrap;
-  line-height: 1;
-}
-
+.navbar__sreshta-line1,
 .navbar__sreshta-line2 {
   font-family: var(--font-heading);
-  font-size: 0.65rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #000000;
-  letter-spacing: 3.5px;
+  letter-spacing: 1.5px;
   white-space: nowrap;
   line-height: 1;
   text-transform: uppercase;
-  margin-top: 2px;
 }
 
 /* Keep legacy .navbar__sreshta-text for any other usage */
@@ -301,17 +292,14 @@
 
   .navbar__brand-pill {
     height: 32px;
-    padding: 0 0.6rem;
+    padding: 0 0.55rem;
+    gap: 1px;
   }
 
-  .navbar__sreshta-line1 {
-    font-size: 0.95rem;
-    letter-spacing: 1.5px;
-  }
-
+  .navbar__sreshta-line1,
   .navbar__sreshta-line2 {
-    font-size: 0.45rem;
-    letter-spacing: 2px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
   }
 
   .navbar__sreshta-img {
@@ -342,17 +330,14 @@
 
   .navbar__brand-pill {
     height: 28px;
-    padding: 0 0.45rem;
+    padding: 0 0.4rem;
+    gap: 1px;
   }
 
-  .navbar__sreshta-line1 {
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-  }
-
+  .navbar__sreshta-line1,
   .navbar__sreshta-line2 {
-    font-size: 0.4rem;
-    letter-spacing: 1.5px;
+    font-size: 0.55rem;
+    letter-spacing: 0.8px;
   }
 
   .navbar__sreshta-img {
